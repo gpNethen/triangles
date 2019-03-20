@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript">
+        function triangleInvasion(size)
+        {
+            var sout, starCount;
+            sout='';  // Empty string representing start of first triangle
+            starCount=0; // Initializes asterisk counter for this triangle
+            for (i=1; i<=size; i++)
+            {
+                for (j=1; j<=size; j++)
+                {
+                    if(i<=j){
+                        sout+='*';
+                        starCount++;
+                    }
+                    else
+                        sout+='&nbsp;';
+                }
+            sout+='<br>';
+            }
+        sout+='<br><br>';
+        document.write('<p>'+starCount+' Asterisks in triangle below.</p>');
+        document.write(sout);
+            sout=''; //empty string representing start of second triangle
+            starCount=0; // Initializes asterisk counter for this triangle
+            for (i=size; i>=1; i--)
+            {
+                for (j=size; j>=1; j--)
+                {
+                    if(i<=j){
+                        sout+='*';
+                        starCount++;
+                    }
+                    else
+                        sout+='&nbsp;';
+                }
+            sout+='<br>';
+            }
+        sout+='<br><br>';
+        document.write('<p>'+starCount+' Asterisks in triangle below.</p>');
+        document.write(sout);
+            sout='';  // Empty string representing start of third triangle
+            starCount=0; // Initializes asterisk counter for this triangle
+            for (i=1; i<=size; i++)
+            {
+                for (j=1; j<=size; j++)
+                {
+                    if(i<=j){
+                        sout+='*';
+                        starCount++;
+                    }
+                }
+            sout+='<br>';
+            }
+        sout+='<br><br>';
+        document.write('<p>'+starCount+' Asterisks in triangle below.</p>');
+        document.write(sout);
+            sout=''; //empty string representing start of fourth triangle
+            starCount=0; // Initializes asterisk counter for this triangle
+            for (i=1; i<=size; i++)
+            {
+                for (j=size; j>=0; j--)
+                {
+                    if(j>=i)
+                        sout+='&nbsp;';
+                    else{
+                        sout+='*';
+                        starCount++;
+                    }
+                }
+            sout+='<br>';
+            }
+        sout+='<br><br>';
+        document.write('<p>'+starCount+' Asterisks in triangle below.</p>');
+        document.write(sout);
+        	sout='';  // Empty string representing start of first hollow triangle
+        	starCount=0; // Initializes asterisk counter for this triangle
+            for (i=1; i<=size; i++)
+            {
+                for (j=1; j<=size; j++)
+                {
+                    if(i==1){
+                        sout+='*';
+                        starCount++;
+                    }else if(j==i){
+                        sout+='*';
+                        starCount++;
+                    }else if(j==size){
+                    	sout+='*';
+                    	starCount++;
+                    }else
+                    	sout+='&nbsp;';
+                }
+            sout+='<br>';
+            }
+        sout+='<br><br>';
+        document.write('<p>'+starCount+' Asterisks in triangle below.</p>');
+        document.write(sout);
+            sout=''; //empty string representing start of second hollow triangle
+            starCount=0; // Initializes asterisk counter for this triangle
+            for (i=size; i>=1; i--)
+            {
+                for (j=size; j>=1; j--)
+                {
+                    if(i==1){
+                        sout+='*';
+                        starCount++;
+                    }else if(j==i){
+                        sout+='*';
+                        starCount++;
+                    }else if(j==size){
+                    	sout+='*';
+                    	starCount++;
+                    }else
+                    	sout+='&nbsp;';
+                }
+            sout+='<br>';
+            }
+        sout+='<br><br>';
+        document.write('<p>'+starCount+' Asterisks in triangle below.</p>');
+        document.write(sout);
+        	sout=''; //empty string representing start of third hollow triangle
+        	starCount=0; // Initializes asterisk counter for this triangle
+            for (i=1; i<=size; i++)
+            {
+                
+                for (j=size; j>=1; j--)
+                {
+                    if(i==1){
+                        sout+='*';
+                        starCount++;
+                    }else if(j==i){
+                        sout+='*';
+                        starCount++;
+                    }else if(j==size){
+                    	sout+='*';
+                    	starCount++;
+                    }else
+                    	sout+='&nbsp;';
+                }
+            sout+='<br>';
+            }
+        sout+='<br><br>';
+        document.write('<p>'+starCount+' Asterisks in triangle below.</p>');
+        document.write(sout);
+            sout='';  // Empty string representing start of fourth hollow triangle
+            starCount=0; // Initializes asterisk counter for this triangle
+            for (i=1; i<=size; i++)
+            {
+                for (j=size; j>=1; j--)
+                {
+                    if(i==size){
+                        sout+='*';
+                        starCount++;
+                    }else if(j==i){
+                        sout+='*';
+                        starCount++;
+                    }else if(j==1){
+                    	sout+='*';
+                    	starCount++;
+                    }else
+                    	sout+='&nbsp;';
+                }
+            sout+='<br>';
+            }
+        sout+='<br><br>';
+        document.write('<p>'+starCount+' Asterisks in triangle below.</p>');
+        document.write(sout);
+        }
+        </script>
+    </head>
+    <body>
+    	<p>Choose the size of your triangle (Number of '*' per side):</p>
+        <input type="text" id="box1" size="13" value="0" onchange="triangleInvasion(parseFloat(document.getElementById('box1').value));">
+    </body>
+</html>
